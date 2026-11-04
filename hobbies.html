@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101315">
+    <meta name="description" content="The things I love outside data: photography, preserving memories, video games and shared stories.">
+    <title>Things That I Love | Gregorio Adri Prawira</title>
+    <link rel="preload" href="assets/fonts/Montserrat-Latin-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Inter-Latin-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hobbies.css">
+    <link rel="stylesheet" href="games.css">
+    <script src="script.js" defer></script>
+    <script src="hobbies.js" defer></script>
+    <script src="games.js" defer></script>
+  </head>
+  <body class="hobbies-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="atmosphere" aria-hidden="true">
+      <div class="smoke smoke--back"></div>
+      <div class="smoke smoke--front"></div>
+      <canvas id="dust"></canvas>
+      <div class="vignette"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="index.html#home" aria-label="Gregorio Adri Prawira, home">G<span>A</span>P</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>
+          <span class="menu-toggle__label">Menu</span>
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+        </button>
+        <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+          <a class="nav-link" href="index.html#home">Home</a>
+          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="index.html#projects">Projects</a>
+          <a class="nav-link" href="index.html#skills">Skills</a>
+          <a class="nav-link" href="experience.html#experience">Experience</a>
+          <a class="nav-link" href="experience.html#education">Education</a>
+          <a class="nav-link is-current" href="#hobbies" aria-current="location">Hobbies</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div id="hobbies" class="hobbies-content" data-nav-section="hobbies">
+        <div class="hobbies-heading section-inner">
+          <h1 class="hobbies-title">Things That I Love</h1>
+        </div>
+
+        <section id="photography" class="content-section photography-section" aria-labelledby="photography-title">
+          <div class="section-inner">
+            <h2 id="photography-title" class="section-heading">Photography</h2>
+            <div class="section-body photography-layout">
+              <div class="photography-intro">
+                <div class="photography-story">
+                  <h3 class="hobby-subheading">Why I like it</h3>
+                  <p>It started when my uncle took pictures during a family outing, printed them and kept them in an album. Looking through it, I realised he had preserved precious moments we could return to. That is what drew me to photography: capturing memories.</p>
+                  <p>In middle school, I joined a photography club and met my mentor. He taught me the basics, techniques, patterns and tools, even how to make my own camera. Above all, he taught me that a photo can carry meaning and tell a story. I began noticing small details and visual patterns that I might otherwise have walked past.</p>
+                  <p>One lesson has stayed with me: knowing how and when to use your tools matters more than how many you have. Photography still gives me a reason to explore, whether that means hiking, trekking or visiting somewhere I would not normally go.</p>
+                </div>
+
+                <div class="hobby-genres">
+                  <h3 class="hobby-subheading">Genres</h3>
+                  <ul class="genre-list" aria-label="Photography genres I enjoy">
+                    <li>Human interest</li>
+                    <li>Landscape</li>
+                    <li>Architecture</li>
+                    <li>Products</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="photography-gallery" data-photo-gallery role="region" aria-roledescription="carousel" aria-labelledby="works-title">
+                <div class="photography-gallery__heading">
+                  <h3 id="works-title" class="works-heading">Some of my works</h3>
+                  <button class="photo-playback" type="button" aria-label="Pause photo slideshow" hidden>Pause</button>
+                </div>
+                <!-- Each thin indicator uses data-src and data-alt for its photo. -->
+                <div class="photo-selectors" role="group" aria-label="Choose a photograph" hidden>
+                  <button class="photo-selector" type="button" aria-label="Show photo 1 of 8" aria-pressed="true" aria-controls="photo-window" data-src="assets/photography/photo-01.JPG" data-alt="Children playing in a hall.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                  <button class="photo-selector" type="button" aria-label="Show photo 2 of 8" aria-pressed="false" aria-controls="photo-window" data-src="assets/photography/photo-02.jpg" data-alt="Stranded in a snowstorm.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                  <button class="photo-selector" type="button" aria-label="Show photo 3 of 8" aria-pressed="false" aria-controls="photo-window" data-src="assets/photography/photo-03.jpg" data-alt="Sovereign Hill street view.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                  <button class="photo-selector" type="button" aria-label="Show photo 4 of 8" aria-pressed="false" aria-controls="photo-window" data-src="assets/photography/photo-04.jpg" data-alt="Shrine of Remembrance.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                  <button class="photo-selector" type="button" aria-label="Show photo 5 of 8" aria-pressed="false" aria-controls="photo-window" data-src="assets/photography/photo-05.jpg" data-alt="Kangaroos in Westerfolds Park.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                  <button class="photo-selector" type="button" aria-label="Show photo 6 of 8" aria-pressed="false" aria-controls="photo-window" data-src="assets/photography/photo-06.jpg" data-alt="Kangaroos checking out in the bushes.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                  <button class="photo-selector" type="button" aria-label="Show photo 7 of 8" aria-pressed="false" aria-controls="photo-window" data-src="assets/photography/photo-07.jpg" data-alt="Kombucha photo promotional display.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                  <button class="photo-selector" type="button" aria-label="Show photo 8 of 8" aria-pressed="false" aria-controls="photo-window" data-src="assets/photography/photo-08.jpg" data-alt="Old items in a Australian shed.">
+                    <span class="photo-selector__bar" aria-hidden="true"></span>
+                  </button>
+                </div>
+
+                <div class="photo-stage">
+                  <div id="photo-window" class="photo-window" role="group" aria-roledescription="slide" aria-label="Photo 1 of 8" aria-live="off" data-state="open">
+                    <figure class="photo-frame">
+                      <img class="photo-image" src="assets/photography/photo-01.JPG" alt="Children playing in a hall." decoding="async">
+                      <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
+                      <span class="frame-corner frame-corner--tr" aria-hidden="true"></span>
+                      <span class="frame-corner frame-corner--bl" aria-hidden="true"></span>
+                      <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
+                    </figure>
+                  </div>
+                </div>
+                <p class="gallery-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                <noscript>
+                  <p class="photo-fallback">Open a photo directly:
+                    <a href="assets/photography/photo-01.JPG">Children playing in a hall</a>,
+                    <a href="assets/photography/photo-02.JPG">Stranded in a snowstorm</a>,
+                    <a href="assets/photography/photo-03.JPG">Sovereign Hill street view</a>,
+                    <a href="assets/photography/photo-04.jpeg">Shrine of Remembrance</a>,
+                    <a href="assets/photography/photo-05.JPG">Kangaroos in Westerfolds Park</a>,
+                    <a href="assets/photography/photo-06.JPG">Kangaroos checking out in the bushes</a>,
+                    <a href="assets/photography/photo-07.JPG">Kombucha photo promotional display</a>,
+                    <a href="assets/photography/photo-08.jpeg">Old items in a Australian shed</a>.
+                  </p>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="video-games" class="content-section gaming-section" aria-labelledby="gaming-title">
+          <div class="section-inner">
+            <h2 id="gaming-title" class="section-heading">Video Games</h2>
+            <div class="section-body">
+              <div class="gaming-story">
+                <h3 class="hobby-subheading">Why I like it</h3>
+                <p>I love games because they are fun, but they can be more than that. They can be a powerful storytelling medium, sometimes even more memorable to me than a film.</p>
+                <p>Co-op games give me a way to socialise with friends and work together towards a shared goal. Beyond playing, I am fascinated by how the industry has grown, how games can influence social norms, and how people's perceptions can shape games.</p>
+              </div>
+
+              <div class="hobby-genres">
+                <h3 class="hobby-subheading">Genres</h3>
+                <ul class="genre-list" aria-label="Video game genres I enjoy">
+                  <li>RPG</li><li>Action</li><li>Narrative games</li><li>Co-op</li>
+                </ul>
+              </div>
+
+              <div class="game-gallery" data-game-gallery role="region" aria-roledescription="carousel" aria-labelledby="favourite-games-title">
+                <div class="game-gallery__heading">
+                  <h3 id="favourite-games-title" class="works-heading">Some of my favourite games</h3>
+                  <button class="game-playback" type="button" aria-label="Pause game slideshow" hidden>Pause</button>
+                </div>
+                <div class="game-layout">
+                  <!-- Edit each game's data-description and data-wallpaper below. -->
+                  <div class="game-selectors" role="group" aria-labelledby="favourite-games-title" hidden>
+                    <button class="guide-link game-selector" type="button" aria-label="Show Monster Hunter" aria-pressed="true" aria-controls="game-window" data-title="Monster Hunter" data-description="The Monster Hunter series is a franchise of RPG Hunting Action video games featuring action combat in naturalistic environments. The player takes the role of a Hunter, slaying or trapping large monsters across various landscapes as part of quests given to them by locals. Players can work together with 3 others against difficult monsters, which become the essential selling point of the game." data-wallpaper="assets/games/wallpapers/MHWilds-Key_Art_001.webp">
+                      <span class="game-selector__logo"><img src="assets/games/logos/monster-hunter.svg" width="112" height="54" alt="" decoding="async"></span>
+                      <span class="game-selector__name">Monster Hunter</span>
+                    </button>
+                    <button class="guide-link game-selector" type="button" aria-label="Show Cyberpunk 2077" aria-pressed="false" aria-controls="game-window" data-title="Cyberpunk 2077" data-description="Cyberpunk 2077 is a 2020 action role-playing game in First-person perspective developed by CD Projekt Red. The game takes place in the dystopian metropolis of Night City in California. The player assumes the role of V, a mercenary who is reluctantly imbued with an experimental 'biochip' containing the engram of rocker-turned-terrorist Johnny Silverhand. As Johnny's consciousness begins overwriting V's own, the two must work together to separate from each other by confronting the Arasaka Corporation, a powerful megacorporation acting as the de facto ruler of Night City." data-wallpaper="assets/games/wallpapers/cover-1920-bd460362.jpg">
+                      <span class="game-selector__logo game-selector__logo--dark"><img src="assets/games/logos/cyberpunk-2077.svg" width="112" height="54" alt="" decoding="async"></span>
+                      <span class="game-selector__name">Cyberpunk 2077</span>
+                    </button>
+                    <button class="guide-link game-selector" type="button" aria-label="Show Metal Gear Solid" aria-pressed="false" aria-controls="game-window" data-title="Metal Gear Solid" data-description="Metal Gear Solid is part of a series called Metal Gear, which is a Japanese stealth action games created by Hideo Kojima. The player controls a Special Forces Operative who is sent on a military mission which eventually leads him to face off against a superweapon, walking tank with nuclear capabilities called 'Metal Gear'. Metal Gear pioneered the stealth genre and features a lot of characteristics which set it apart from most other video games. It also has storylines which explore the nature of politics, warfare, science (especially genetics) and a lot of social, cultural and philosophical themes such as free will and artificial intelligence, among many others." data-wallpaper="assets/games/wallpapers/l6NA2Vx.png">
+                      <span class="game-selector__logo"><img src="assets/games/logos/metal-gear-solid.svg" width="112" height="54" alt="" decoding="async"></span>
+                      <span class="game-selector__name">Metal Gear Solid</span>
+                    </button>
+                    <button class="guide-link game-selector" type="button" aria-label="Show Assassin's Creed" aria-pressed="false" aria-controls="game-window" data-title="Assassin's Creed" data-description="Assassin's Creed is a historical action-adventure video game series and media franchise created by Ubisoft. The series depicts a fictional millennia-old struggle between the Order of Assassins, who fight for peace and free will, and the Knights Templar, who desire peace through order and control. The series features historical fiction, science fiction, and fictional characters intertwined with real-world historical events and historical figures. This series is the first one to incorporate parkour, stealth and parry-system combat." data-wallpaper="assets/games/wallpapers/thumb-1920-2759.jpg">
+                      <span class="game-selector__logo"><img src="assets/games/logos/assassins-creed.svg" width="112" height="54" alt="" decoding="async"></span>
+                      <span class="game-selector__name">Assassin's Creed</span>
+                    </button>
+                  </div>
+                  <div class="game-stage">
+                    <div id="game-window" class="game-window" role="group" aria-roledescription="slide" aria-labelledby="game-title" aria-live="off" data-state="open">
+                      <img class="game-wallpaper" src="assets/games/wallpapers/MHWilds-Key_Art_001.webp" alt="" aria-hidden="true" decoding="async">
+                      <div class="game-copy">
+                        <h4 id="game-title" class="game-title">Monster Hunter</h4>
+                        <p class="game-description">The Monster Hunter series is a franchise of RPG Hunting Action video games featuring action combat in naturalistic environments. The player takes the role of a Hunter, slaying or trapping large monsters across various landscapes as part of quests given to them by locals. Players can work together with 3 others against difficult monsters, which become the essential selling point of the game.</p>
+                      </div>
+                      <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
+                      <span class="frame-corner frame-corner--tr" aria-hidden="true"></span>
+                      <span class="frame-corner frame-corner--bl" aria-hidden="true"></span>
+                      <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
+                    </div>
+                    <a class="guide-link game-home-link" href="index.html#home">
+                      <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M16 10H4m5-5-5 5 5 5"/></svg>
+                      <span>Back to homepage</span>
+                    </a>
+                  </div>
+                </div>
+                <p class="gallery-status game-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                <noscript>
+                  <p class="photo-fallback">Open a game wallpaper directly:
+                    <a href="assets/games/wallpapers/MHWilds-Key_Art_001.webp">Monster Hunter</a>,
+                    <a href="assets/games/wallpapers/cover-1920-bd460362.jpg">Cyberpunk 2077</a>,
+                    <a href="assets/games/wallpapers/l6NA2Vx.png">Metal Gear Solid</a>,
+                    <a href="assets/games/wallpapers/thumb-1920-2759.jpg">Assassin's Creed</a>.
+                  </p>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Gregorio Adri Prawira</span>
+        <span>2026</span>
+      </div>
+    </footer>
+  </body>
+</html>

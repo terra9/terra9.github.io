@@ -1,0 +1,126 @@
+/* Photography page only. The shared theme, fonts and navigation stay in styles.css. */
+.hobbies-content { scroll-margin-top: 0; }
+.hobbies-heading { padding-block: 64px 54px; }
+.hobbies-title {
+  margin: 0;
+  color: var(--heading);
+  font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 650;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+.photography-section { padding-top: 0; padding-bottom: 80px; }
+.photography-section::before { display: none; }
+.photography-section > .section-inner > .section-heading { font-size: clamp(23px, 2.3vw, 29px); }
+.photography-layout { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: start; gap: clamp(32px, 4vw, 60px); }
+.photography-intro, .photography-gallery { min-width: 0; }
+.photography-story { max-width: 84ch; font-size: 15px; line-height: 1.9; }
+.hobby-subheading {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.photography-story p { margin: 0; }
+.photography-story p + p { margin-top: 17px; }
+.hobby-genres { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; margin-top: 28px; }
+.hobby-genres .hobby-subheading { margin: 0; }
+.genre-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.genre-list li {
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  background: #0a131c;
+  color: var(--text);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.works-heading {
+  margin: 0 0 22px;
+  color: var(--heading);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+.photography-gallery__heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 32px; }
+.photography-gallery__heading .works-heading { margin: 0; }
+.photo-playback {
+  flex-shrink: 0;
+  min-width: 52px;
+  min-height: 32px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  background: var(--surface-button);
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.photo-playback:hover, .photo-playback:focus-visible { border-color: var(--hologram); background: var(--surface-button-hover); color: var(--hologram); }
+.photo-selectors { display: flex; flex-wrap: nowrap; gap: 8px; width: min(100%, 320px); margin: 8px 0 12px; }
+.photo-selector {
+  display: grid;
+  place-items: center;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.photo-selector__bar { display: block; width: 100%; height: 3px; background: #637078; transition: background-color 180ms ease, box-shadow 180ms ease; }
+.photo-selector:hover .photo-selector__bar, .photo-selector:focus-visible .photo-selector__bar { background: var(--heading); }
+.photo-selector[aria-pressed="true"] .photo-selector__bar { background: var(--hologram); box-shadow: 0 0 9px rgba(164, 229, 242, 0.3); }
+.photo-selector:focus-visible, .photo-playback:focus-visible { outline: 2px solid var(--hologram); outline-offset: 3px; }
+.photo-stage { --photo-height: clamp(340px, 36vw, 500px); min-height: var(--photo-height); }
+.photo-window { min-width: 0; transform-origin: left center; }
+.photo-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  height: var(--photo-height);
+  margin: 0;
+  padding: 8px;
+  border: 1px solid rgba(164, 229, 242, 0.5);
+  background: #060c12;
+}
+/* Contain preserves the full composition for either orientation, without cropping. */
+.photo-image { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.photo-frame .frame-corner { width: 13px; height: 15px; }
+.gallery-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.photo-fallback { margin: 0; font-size: 14px; line-height: 1.9; }
+.photo-fallback a { text-underline-offset: 4px; }
+.photo-fallback a:hover { color: var(--hologram); }
+
+@media (max-width: 960px) {
+  .photography-layout { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .photo-stage { --photo-height: clamp(320px, 55vw, 500px); }
+}
+@media (max-width: 760px) {
+  .hobbies-heading { padding-block: 44px 40px; }
+  .hobbies-title { max-width: 14ch; font-size: clamp(30px, 6vw, 38px); }
+  .photography-section { padding-top: 0; padding-bottom: 56px; }
+  .photography-story { font-size: 14px; line-height: 1.85; }
+  .hobby-genres { align-items: start; flex-direction: column; gap: 12px; margin-top: 25px; }
+  .genre-list { gap: 8px; }
+  .genre-list li { padding: 6px 9px; font-size: 10px; }
+  .works-heading { margin-bottom: 20px; font-size: 14px; }
+  .photo-selectors { gap: 6px; }
+  .photo-stage { --photo-height: clamp(280px, 74vw, 460px); }
+}
+@media (max-width: 370px) {
+  .photography-section .section-body { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-window { transform: none !important; }
+  .photo-selector__bar { transition: none; }
+}
